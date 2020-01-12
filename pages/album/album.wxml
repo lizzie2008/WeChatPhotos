@@ -1,0 +1,15 @@
+<view class="album-container">
+  <image class="album-item" mode="aspectFill" src="../../images/add.gif" hidden></image>
+  <block wx:for="{{albums}}" wx:key="albumsId">
+    <navigator  class="album-item" url="../photo/photo?albumID={{item.ID}}">
+        <image mode="aspectFill" src="{{siteApi}}{{item.Photos[0].Path}}" />
+        <view class="album-item-top">
+          <text>相册>>{{item.Title}}</text>
+        </view>
+        <view class="album-item-bottom">
+          <text>{{item.UpvoteCount}} 赞同</text>
+          <text>{{item.CommentCount}} 评论</text>
+        </view>
+    </navigator>
+  </block>
+</view>

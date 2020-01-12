@@ -1,0 +1,7 @@
+<view class="photo-container">
+  <block wx:for="{{photos}}"  wx:key="photosId">
+    <view class="photo-item">
+      <image mode="aspectFill" src="{{siteApi}}{{item.Path}}" />
+    </view>
+  </block>
+</view>
